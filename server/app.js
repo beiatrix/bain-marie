@@ -17,7 +17,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 // api routes
-app.use('/api', require('./routes'))
+app.use('/api', require('./api'))
 
 // send index.html for any other requests
 app.get('*', (req, res) => {

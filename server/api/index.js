@@ -15,7 +15,7 @@ const router = require('express').Router()
 // router.use('/kittens', require('./kittens'))
 
 // ---------- TODO ROUTER ----------
-router.use('/todos', require('./api/todos'))
+router.use('/todos', require('./todos'))
 
 // If someone makes a request that starts with `/api`,
 // but you DON'T have a corresponding router, this piece of
