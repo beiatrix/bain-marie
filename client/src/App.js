@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {Todo} from './components'
 
 class App extends Component {
   constructor(props) {
@@ -15,14 +16,7 @@ class App extends Component {
     this.setState({
       todos: data
     })
-    // console.log(data)
   }
-
-  // getTodos() {
-  //   fetch("http://localhost:9000/api/todos")
-  //       .then(res => res.text())
-  //       .then(res => console.log(res));
-  // }
 
   componentWillMount() {
     this.getTodos()
@@ -33,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-
+          <Todo data={this.state.data}></Todo>
         </header>
       </div>
     );
