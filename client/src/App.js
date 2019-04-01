@@ -11,14 +11,25 @@ class App extends Component {
 
   async getTodos() {
     const res = await fetch('http://localhost:9000/api/todos')
-    console.log(res)
+    const data = await res.json()
+    this.setState({
+      todos: data
+    })
+    // console.log(data)
   }
+
+  // getTodos() {
+  //   fetch("http://localhost:9000/api/todos")
+  //       .then(res => res.text())
+  //       .then(res => console.log(res));
+  // }
 
   componentWillMount() {
     this.getTodos()
   }
 
   render() {
+    console.log(this.state)
     return (
       <div className="App">
         <header className="App-header">
